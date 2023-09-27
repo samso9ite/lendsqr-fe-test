@@ -1,4 +1,4 @@
-import { Outlet, useNavigation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 // import Navigation from '../components/layout/SideNav'
 
 const RootLayout = () => {

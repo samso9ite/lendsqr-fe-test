@@ -1,8 +1,8 @@
 import {useState} from 'react'
-import { componentType } from '../types/BasicTypes';
+// import { componentType } from '../types/BasicTypes';
 import PaginationControl from './PaginationControl';
-import {useDispatch} from 'react-redux'
-import { paginationActions } from '../store/pagination-slice';
+// import {useDispatch} from 'react-redux'
+// import { paginationActions } from '../store/pagination-slice';
 
 const Pagination = ({data,itemsPerPage,children}:{data:any[],itemsPerPage:number,children?:any}) => {
 
@@ -18,7 +18,7 @@ const Pagination = ({data,itemsPerPage,children}:{data:any[],itemsPerPage:number
         setCurrentPage(newPage);
     };
 
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
     
     let controlData:any = {
         currentPage:currentPage,

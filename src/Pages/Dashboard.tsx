@@ -1,10 +1,7 @@
 import DashboardStat from "../components/DashboardStat"
 import UserList from "../components/UserList"
 import MainLayout from "../components/layout/MainLayout"
-import PaginationControl from "../utils/PaginationControl"
-import { useSelector } from "react-redux"
 import {useEffect, useState} from 'react'
-import { Link, NavLink } from "react-router-dom"
 
 const Dashboard = () => {
 const [controls, setControls] = useState<any>({})

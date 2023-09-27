@@ -1,4 +1,3 @@
-import React from 'react';
 import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import Dashboard from './Pages/Dashboard';
 import UserDetail from './Pages/UserDetail';

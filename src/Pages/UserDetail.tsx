@@ -1,17 +1,13 @@
 import MainLayout from "../components/layout/MainLayout"
-import Api from '../Api'
-import {useState, useEffect} from 'react'
 import {useParams, Link} from 'react-router-dom'
 
 const UserDetail = () => {
     const {id} = useParams()
-    console.log(id);
     
     // get users from localstorage and search through
     const storedData:any = localStorage.getItem('users')
     const users =  JSON.parse(storedData)
     const user = users.find((item:any) => item.uuid === id)
-    console.log(user);
     
     return(
         <MainLayout>

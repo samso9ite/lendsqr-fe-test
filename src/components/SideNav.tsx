@@ -1,11 +1,11 @@
-
-const navHeaderStyle ={
-    fontSize: '12px',
-    fontWeight: '600'
-   
-}
-
 const SideNav = () => {
+
+    const navHeaderStyle ={
+        fontSize: '12px',
+        fontWeight: '600'
+       
+    }
+
     return( 
         <div className=" col-md-3 col-xl-2 px-sm-4 bg-white" >
             <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-5 text-white min-vh-100">
