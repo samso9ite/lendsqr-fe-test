@@ -7,12 +7,21 @@ import {Link} from 'react-router-dom'
 
 const UserList = () => {
     const [data, setData] = useState<any>(null)
+    const [isLoading, setIsLoading] = useState<boolean>(false)
 
     useEffect(() => {   
+        setIsLoading(true)
         Api.get('users')
         .then((res: AxiosResponse) => {
             setData(res.data)
             localStorage.setItem('users', JSON.stringify(res.data))
+        })
+        .catch(err => {
+            console.log(err);
+            
+        })
+        .finally(() => {
+            setIsLoading(false)
         })
     }, [])
 
@@ -30,6 +39,7 @@ const UserList = () => {
                 </tr>
             </thead>
             <tbody>
+            {isLoading  && <h5>Loading ...</h5>}
             {data !== null && 
             <Pagination data={data} itemsPerPage={10}>
                 {(currentPageData: any[]) =>
